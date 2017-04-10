@@ -1,0 +1,72 @@
+.cuisine {
+  padding-top: 80px;
+  text-align: center;
+
+  .gallery {
+    li {
+      padding-top: 20px;
+      position: relative;
+
+      &:hover:before {
+        bottom: 45px;
+      }
+
+
+      &:before {
+        @include respond-to(small) {
+          left: 10px;
+          bottom: 5px;
+          font-size: 15px;
+        }
+        @include fontStyle($fontOpenSans, 25px, 400);
+        position: absolute;
+        left: 31px;
+        bottom: 14px;
+        text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.87);
+        color: #fefefe;
+        transition: all ease-in-out 0.5s;
+      }
+
+      &.pizza:before {
+        content: 'Pizza';
+      }
+
+      &.chinese:before {
+        content: 'Chinese';
+      }
+
+      &.mexican:before {
+        content: 'Mexican';
+      }
+
+      &.sushi:before {
+        content: 'Sushi';
+      }
+
+      &.branch:before {
+        content: 'Branch';
+      }
+
+      &.fast:before {
+        content: 'Fast Food';
+      }
+    }
+  }
+
+  .countries {
+    padding-top: 40px;
+    text-align: left;
+
+    & li:last-child {
+      font-weight: 700;
+    }
+
+    a {
+      transition: all ease-in-out 0.5s;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.cities {
+  padding-top: 105px;
+  text-align: center;
+
+  .cities-gallery {
+    @include respond-to(medium) {
+      justify-content: space-around;
+    }
+    max-width: 1185px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+      margin-top: 15px;
+      position: relative;
+      cursor: pointer;
+
+      &:hover:after {
+        width: 100%;
+      }
+
+      &:after {
+        @include background-opacity(#c7ebfb, 0.5);
+        content: '';
+        height: 100%;
+        width: 35px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all ease 1s;
+      }
+
+      &:before {
+        @include fontStyle($fontOpenSans, 25px, 400);
+        position: absolute;
+        left: 17px;
+        bottom: 18px;
+        text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.87);
+        color: #fefefe;
+      }
+
+      &.denver:before {
+        content: 'Denver, CO';
+      }
+
+      &.austin:before {
+        content: 'Austin, TX';
+      }
+
+      &.pittsburg:before {
+        content: 'Pittsburgh, PA';
+      }
+
+      &.berkley:before {
+        content: 'Berkley, CA';
+      }
+
+      &.weston:before {
+        content: 'Weston, FL';
+      }
+    }
+  }
+
+  .cities-list {
+    @include respond-to(medium) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    padding-top: 50px;
+    padding-bottom: 140px;
+    text-align: left;
+
+    li {
+      display: block;
+
+      &.all {
+        font-weight: 700;
+      }
+
+      a {
+        transition: all ease-in-out 0.5s;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+
+  }
+}

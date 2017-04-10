@@ -3,6 +3,7 @@
 //
 //  Table of Contents:
 //
+//   0.5 My settings
 //   1. Global
 //   2. Breakpoints
 //   3. The Grid
@@ -43,11 +44,23 @@
 
 @import 'util/util';
 
+// 0.5 My settings
+// ---------
+
+//fonts
+$fontOpenSans: 'Open Sans', sans-serif;
+$fontBurbank: "Burbank", sans-serif;
+//colors
+$white: #ffffff;
+$black: #000000;
+$yellow: #f5e314;
+
+
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1220);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #1779ba,

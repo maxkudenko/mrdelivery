@@ -1,0 +1,48 @@
+.about {
+  text-align: center;
+  padding-top: 30px;
+
+  .img-holder {
+    min-width: 100px;
+  }
+
+  h2 {
+    padding-top: 18px;
+  }
+  
+  .benefits {
+    text-align: left;
+    padding: 70px 0;
+    border-bottom: 1px solid #c7ebfb;;
+
+    li {
+      @include respond-to(medium) {
+        margin-top: 35px;
+        margin-left: 25px;
+      }
+      padding-left: 80px;
+      position: relative;
+
+      &:before {
+        content: '';
+        height: 65px;
+        width: 65px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &.tablet:before {
+        background: url("../img/tablet-icon.png") no-repeat;
+      }
+
+      &.fork:before {
+        background: url("../img/fork-icon.png") no-repeat;
+      }
+
+      &.dollar:before {
+        background: url("../img/dollor-icon.png") no-repeat center/cover;
+      }
+    }
+  }
+}

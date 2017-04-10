@@ -1,0 +1,193 @@
+header {
+  background: url("../img/header-background.jpg") no-repeat center/cover;
+
+  .header-wrapper {
+    @include respond-to(small) {
+      display: block;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .logo {
+      @include respond-to(small) {
+        padding-left: 0;
+        text-align: center;
+      }
+      padding-left: 19px;
+      padding-top: 12px;
+      min-width: 200px;
+    }
+
+    .connect {
+      @include respond-to(small) {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+      }
+      margin-top: 18px;
+      margin-right: 37px;
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        @include respond-to(medium) {
+          padding-right: 5px;
+          font-size: 12px;
+        }
+        color: $white;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-right: 65px;
+        transition: all ease-in-out 0.5s;
+
+        &:hover {
+          color: $yellow;
+        }
+
+        &:before {
+          font-family: 'FontAwesome';
+          height: 20px;
+          width: 20px;
+          margin-right: 9px;
+        }
+
+        &.chat:before {
+          content: '\f075';
+        }
+
+        &.ask:before {
+          content: '\f059';
+        }
+      }
+
+      button {
+        cursor: pointer;
+        width: 150px;
+        height: 47px;
+        border-radius: 9px;
+        border: 3px solid $white;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all ease-in-out 0.5s;
+
+        &:hover {
+          color: $yellow;
+          border-color: $yellow;
+        }
+      }
+
+    }
+  }
+
+  .header-title {
+    @include respond-to(small) {
+      padding-top: 60px;
+    }
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 180px;
+
+    .tabs-container {
+      @include respond-to(small) {
+        width: 250px;
+        height: 100px;
+      }
+      width: 788px;
+      height: 155px;
+      padding-top: 50px;
+
+      a {
+        @include respond-to(small) {
+          font-size: 10px;
+        }
+        @include fontStyle($fontOpenSans, 20px, 700);
+        background-color: transparent;
+        color: $white;
+        transition: all ease-in-out 0.5s;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+
+      .tabs-title {
+        @include respond-to(small) {
+          width: 80px;
+        }
+        width: 173px;
+        position: relative;
+        border-top: 6px solid transparent;
+        border-right: 1px solid $black;
+      }
+
+      .tabs, .tabs-content {
+        @include background-opacity($black);
+        border: transparent;
+        color: $white;
+      }
+
+      .tabs-title.is-active {
+        @include background-opacity($black, 0.53);
+        border-top: 6px solid $yellow;
+
+        a {
+          color: $yellow;
+        }
+      }
+
+      .tabs-panel.is-active {
+        @include background-opacity($black, 0.53);
+      }
+
+      input {
+        @include respond-to(small) {
+          width: 200px;
+          height: 40px;
+        }
+        @include placeholder {
+          @include respond-to(small) {
+            font-size: 6px;
+          }
+          @include fontStyle($fontOpenSans, 16px, 400);
+          color: #666666;
+          line-height: 31px;
+          padding-left: 40px;
+          background: url("../img/input-background.png") no-repeat;
+        }
+        width: 463px;
+        height: 59px;
+        background-color: $white;
+        border: none;
+      }
+
+      button {
+        @include respond-to(small) {
+          width: 200px;
+          height: 40px;
+          margin-top: 10px;
+          border-radius: 10px;
+          font-size: 10px;
+        }
+        @include fontStyle($fontBurbank, 19px, 700);
+        width: 280px;
+        height: 59px;
+        border-radius: 0 10px 10px 0;
+        background-color: #f5e64d;
+        text-transform: uppercase;
+        margin-left: -5px;
+        cursor: pointer;
+        transition: all ease-in-out 0.5s;
+        
+        &:hover {
+          background-color: #F5B33E;
+        }
+      }
+    }
+  }
+
+}

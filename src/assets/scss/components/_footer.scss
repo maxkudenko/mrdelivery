@@ -1,0 +1,104 @@
+footer {
+  background: linear-gradient(to top, #181818 0%, #4c4c4c 100%);
+
+  .footer-navigation {
+    @include respond-to(medium) {
+      border-bottom: none;
+      text-align: center;
+    }
+    padding-top: 15px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #727272;
+
+    .footer-menu {
+      @include respond-to(medium) {
+        border-left: none;
+        padding-left: 0;
+      }
+      border-left: 1px solid #727272;
+      padding-left: 55px;
+
+      ul {
+        margin-top: 50px;
+
+        a {
+          @include fontStyle($fontOpenSans, 16px, 400);
+          color: $white;
+          padding-left: 27px;
+          padding-top: 50px;
+          transition: all ease-in-out 0.5s;
+
+          &:hover {
+            color: $yellow;
+          }
+        }
+      }
+
+    }
+  }
+
+  .links {
+    padding-top: 40px;
+
+    li {
+      margin: 0 7px;
+    }
+
+    a {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: $white;
+      text-align: center;
+      transition: all ease-in-out 0.5s;
+
+      &:hover {
+        background-color: $yellow;
+      }
+
+      &:before {
+        font-family: FontAwesome;
+        font-size: 30px;
+        color: $black;
+      }
+
+      &.facebook:before {
+        content: '\f09a';
+      }
+
+      &.twitter:before {
+        content: '\f099';
+      }
+
+      &.linkedin:before {
+        content: '\f0e1';
+      }
+
+      &.mail:before {
+        content: '\f003';
+      }
+
+      &.pinterest:before {
+        content: '\f0d2';
+      }
+
+      &.instagram:before {
+        content: '\f16d';
+      }
+
+    }
+
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 45px;
+
+    p {
+      @include fontStyle($fontOpenSans, 16px, 400);
+      color: $white;
+    }
+  }
+}

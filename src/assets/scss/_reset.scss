@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family: "Burbank";
+    src: url("../fonts/BurbankBigWide-Bold.otf") format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontOpenSans;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @include fontStyle($fontOpenSans, 50px, 600);
+    color: $white;
+}
+
+h2 {
+    @include fontStyle($fontBurbank, 39px, 700);
+    color: $black;
+}
+
+h3 {
+    @include fontStyle($fontBurbank, 26px, 700);
+    color: $black;
+    text-transform: uppercase;
+}
